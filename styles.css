@@ -1,0 +1,447 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: black;
+  background: white;
+}
+
+::selection {
+  color: black;
+  background: white;
+}
+
+.nav {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  position: fixed;
+  z-index: 200;
+}
+.nav img {
+  height: 25px;
+  margin: 32px 0 0 92px;
+}
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.m ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  color: white;
+  margin-top: 50px;
+}
+.m ul li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12.8px;
+  color: white;
+  cursor: pointer;
+  padding: 0 8px;
+  line-height: 1.4px;
+  letter-spacing: -0.38px;
+}
+.m ul i {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  padding: 0 12px;
+  line-height: 1.4px;
+}
+.menu2 {
+  margin-right: 20px;
+}
+/*animation li*/
+.m ul li::after {
+  content: "";
+  height: 0.4px;
+  width: 0%;
+  background-color: white;
+  display: block;
+  margin: 8px 0 0 0;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.m ul li:hover::after {
+  width: 100%;
+}
+.secondary-menu {
+  width: 370px;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  display: none;
+  border-left: 4px solid rgb(99, 91, 91);
+}
+.secondary-menu i {
+  color: #fcfcfc;
+  font-size: 20px;
+  float: right;
+  margin: 40px 35px 0 0;
+  cursor: pointer;
+  z-index: 30;
+}
+.res-ul {
+  display: none;
+}
+.sec-ul {
+  width: 76%;
+  margin: auto;
+  margin-top: 0;
+}
+.sec-ul ul {
+  float: right;
+  list-style: none;
+  margin: auto;
+}
+.sec-ul ul li {
+  border-bottom: 2px solid #383636;
+  color: white;
+  padding: 10px 0 10px 180px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  text-align: right;
+  margin: auto;
+  letter-spacing: -0.2px;
+}
+.sec-ul ul li:hover {
+  color: #8d8787;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.all-ul {
+  width: 75%;
+  height: auto;
+  margin-right: 20px;
+  margin-top: 70px;
+  position: absolute;
+  right: 0;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background: url("images/Starlink-4-12_desktop_homepage.webp") no-repeat center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+}
+
+/* section styling*/
+.text {
+  color: white;
+  width: auto;
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  -webkit-transform: translate(-50%, -50%) !important;
+  -moz-transform: translate(-50%, -50%) !important;
+  -ms-transform: translate(-50%, -50%) !important;
+  -o-transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%) !important;
+  top: 72%;
+  left: 57%;
+  z-index: 10;
+  margin: 4px;
+}
+.text h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.text h2 {
+  font-size: 40px;
+  margin: 6px 0 14px 0;
+}
+.text button {
+  appearance: none;
+  background: none;
+  border: 2px solid white;
+  outline: none;
+  width: 170px;
+  height: 55px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s;
+  background-image: linear-gradient(to top, white 50%, transparent 50%);
+  background-size: 100% 200%;
+  background-position: 0% 0%;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.text button:hover {
+  color: black;
+  background-position: 0% 100%;
+}
+
+/* down aria */
+.down {
+  color: white;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  font-size: 30px;
+  animation: down 6s infinite;
+  -webkit-animation: down 6s infinite;
+}
+@keyframes down {
+  0% {
+    top: 89%;
+  }
+  25% {
+    top: 91%;
+  }
+  26% {
+    top: 89%;
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+    top: 89%;
+  }
+  65% {
+    top: 91%;
+  }
+  66% {
+    opacity: 0;
+    top: 89%;
+  }
+  75% {
+    opacity: 1;
+    top: 89%;
+  }
+  90% {
+    top: 91%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.s-update {
+  width: 100%;
+  height: 100vh;
+  background: url("images/S20_Chopstick_Stack_Desktop.webp") no-repeat center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+}
+.mission {
+  width: 100%;
+  height: 100vh;
+  background: url("images/WEBSITE-DESKTOP_1425_v2.webp") no-repeat center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+}
+.nasa {
+  width: 100%;
+  height: 100vh;
+  background: url("images/hls-resized-2.webp") no-repeat center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+}
+.nasa .text {
+  width: 38%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  left: 25%;
+}
+.footer {
+  width: 100%;
+  height: 110px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.p-group {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.p-group p {
+  margin: 4px 16px;
+  font-weight: bold;
+  font-size: 12.5px;
+  cursor: pointer;
+  letter-spacing: -0.3px;
+}
+.p-group #spacex {
+  color: #777171;
+}
+
+.copy-text {
+  background-color: #383636;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.copy-text p {
+  font-size: 16px;
+  padding: 10px;
+}
+@media screen and (max-width: 980px) {
+  .res-ul {
+    display: block;
+  }
+  .res-ul {
+    width: 76%;
+    margin: auto;
+    margin-top: 0;
+  }
+  .res-ul ul {
+    float: right;
+    list-style: none;
+    margin: auto;
+  }
+  .res-ul ul li {
+    border-bottom: 2px solid #383636;
+    color: white;
+    padding: 10px 0 10px 160px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    text-align: right;
+    margin: auto;
+    letter-spacing: -0.2px;
+  }
+  .res-ul ul li:hover {
+    color: #8d8787;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+  #ul-1 {
+    display: none;
+  }
+  #ul-2 li {
+    display: none;
+  }
+  .sec-ul li {
+    padding-left: 165px !important;
+  }
+
+  #li-1 {
+    padding-left: 100px;
+  }
+  #li-2 {
+    padding-left: 80px;
+  }
+  .nav img {
+    margin: 15px 0 0 30px;
+  }
+  .secondary-menu i {
+    margin: 20px 35px 0 0;
+  }
+  .m ul {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .secondary-menu {
+    width: 290px;
+  }
+  .all-ul {
+    margin: 70px auto;
+    width: 36%;
+    margin-left: 50px;
+  }
+  #li-1 {
+    padding-left: 50px;
+  }
+  #li-2 {
+    padding-left: 30px;
+  }
+  .res-ul {
+    width: 22%;
+  }
+  .res-ul ul li {
+    padding-left: 120px;
+  }
+  .sec-ul ul li {
+    padding-left: 125px !important;
+  }
+  .sec-ul {
+    width: 22%;
+  }
+  .text h2 {
+    font-size: 30px;
+  }
+  .text h4 {
+    font-size: 15px;
+  }
+  .nasa .text {
+    width: 60%;
+    position: relative;
+    left: 50%;
+  }
+}
+@media screen and (max-width: 300px) {
+  .secondary-menu {
+    width: 80%;
+  }
+  .sec-ul {
+    width: 12%;
+  }
+  .res-ul {
+    width: 12%;
+  }
+  .all-ul {
+    margin: 70px auto;
+    width: 20%;
+  }
+  .res-ul ul li {
+    padding-left: 89px;
+    font-size: 12px;
+  }
+  .sec-ul ul li {
+    padding-left: 94px !important;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 278px) {
+  .nav img {
+    height: 20px;
+    margin-left: 5px;
+  }
+  .m ul {
+    margin-top: 28px;
+  }
+  .m ul i {
+    padding: 0 2px;
+  }
+}
